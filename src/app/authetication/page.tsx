@@ -12,7 +12,7 @@ export default async function AutheticationPage() {
     headers: await headers(),
   });
 
-  if (!session?.user) {
+  if (session?.user) {
     redirect("/dashboard");
   }
 
